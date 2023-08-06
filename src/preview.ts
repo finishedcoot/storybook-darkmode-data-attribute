@@ -6,23 +6,19 @@
  *
  * When writing stories, decorators are typically used to wrap stories with extra markup or context mocking.
  *
- * https://storybook.js.org/docs/react/writing-stories/decorators
- */
-import type { Renderer, ProjectAnnotations } from "@storybook/types";
-import { PARAM_KEY } from "./constants";
-import { withGlobals } from "./withGlobals";
-import { withRoundTrip } from "./withRoundTrip";
-
-/**
- * Note: if you want to use JSX in this file, rename it to `preview.tsx`
- * and update the entry prop in tsup.config.ts to use "src/preview.tsx",
+ * https://storybook.js.org/docs/react/writing-stories/decorators#gatsby-focus-wrapper
  */
 
-const preview: ProjectAnnotations<Renderer> = {
-  decorators: [withGlobals, withRoundTrip],
-  globals: {
-    [PARAM_KEY]: false,
+export const parameters = {
+  "data-theme-toggle": {
+    querySelector: "html",
+    "data-target": "theme",
+    default: "light",
+    values: {
+      dark: "dark",
+      light: "light",
+    },
+    lightFill: "#FF0000",
+    darkFill: "#000000",
   },
 };
-
-export default preview;
