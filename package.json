@@ -1,6 +1,6 @@
 {
-  "name": "storybook-darkmode-addon",
-  "version": "0.0.1",
+  "name": "@ardeshiiiiir/storybook-darkmode-addon",
+  "version": "0.0.2",
   "description": "Switching between themes by changing data attribute",
   "keywords": [
     "storybook-addons",
@@ -108,6 +108,7 @@
     "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
   },
   "dependencies": {
+    "@ardeshiiiiir/storybook-darkmode-addon": "^0.0.1",
     "@storybook/addons": "^7.2.1"
   }
 }
